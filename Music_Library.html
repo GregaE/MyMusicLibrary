@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Music_Library.css">
+    <script src="Music_Library.js" async></script>
+    <title>My Music Library</title>
+</head>
+
+<body>
+    <header>My Music Library</header>
+    <section class="create-container">
+        <button id="btn-create">Add a new album!</button>
+    </section>
+    <div id="toggle-container">
+        <div id="toggle-btn">
+        </div>
+    </div>
+    <section class="library">
+    </section>
+        <form id="pop-up" name="popUp">
+            <div class="form-title">
+                <h1>Add a new album</h1>
+                <button class="exit">X</button>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Album name" required>
+                <label for="artist">Artist:</label>
+                <input type="text" id="artist" placeholder="Artist name" required> 
+                <label for="artist">Year:</label>
+                <input type="number" id="year" min="1960" max="2021"> <!-- needs dynamic max -->
+                <p for="genre" id="dropdown">Genre:</p>
+                <select id="genre">
+                    <option disabled selected value>Choose one...</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Hip-Hop">Hip-Hop</option>
+                    <option value="Metal">Metal</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Reggae">Reggae</option>
+                    <option value="Punk">Punk</option>
+                    <option value="Country">Country</option>
+                    <option value="R&B">R&B</option>
+                    <option value="Folk">Folk</option>
+                </select>
+                <p>Type:</p>
+                <label for="type" >
+                    <input name="type" type="radio" value="LP" id="type">LP</input>
+                    <input name="type" type="radio" value="EP" id="type">EP</input>
+                </label>
+                <label for="rating">Rating:</label>
+                <input type="number" min="1" max="10" id="rating">
+                <button type="submit" id="submit">Add</button>
+            </div>
+        </form>
+        <!--
+        <form id="edit-form" name="editForm">
+            <div class="form-group">Edit album</div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Album name" required>
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist" placeholder="Artist name" required> 
+            <label for="artist">Year:</label>
+            <input type="number" id="year" min="1960" max="2021">
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre">
+            <label for="type">Type:</label>
+            <input type="text" id="type">
+            <label for="rating">Rating:</label>
+            <input type="text" id="rating">
+            <button type="submit" id="submit">Add</button>
+        </form>
+    -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDJ9uAIoiD9hEWLU9B7Yt1BqmNyugYGI6E",
+    authDomain: "mymusiclibrary-64d9d.firebaseapp.com",
+    projectId: "mymusiclibrary-64d9d",
+    storageBucket: "mymusiclibrary-64d9d.appspot.com",
+    messagingSenderId: "259731000214",
+    appId: "1:259731000214:web:08153242fe0355a74cebb7",
+    measurementId: "G-53RFX1VDBV"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+</body>
+
+
+
+</html>

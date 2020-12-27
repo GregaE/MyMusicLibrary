@@ -1,0 +1,167 @@
+:root {
+  --main-bg-color: white;
+  --main-text-color: black;
+  --btn-bkg-color: #EF103E;
+  --btn-alt-color: #06F9C8;
+}
+
+
+body {
+  background-color: var(--main-bg-color);
+  font-size: 100%;
+  font-family: 'Montserrat', sans-serif;
+  transition: 0.8s;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: var(--btn-bkg-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 3px 12px;
+}
+
+header {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 25px 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--main-text-color);
+}
+
+section {
+  margin: 20px 0;
+}
+
+.create-container {
+  height: 50px; 
+  font-size: 20px;
+  text-align: center;
+}
+
+#btn-create {
+   height: 50px; 
+   font-size: 1.2rem;
+}
+
+#toggle-container {
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--main-text-color);
+  cursor: pointer;
+}
+
+#toggle-btn {
+  position: relative;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color:  var(--btn-bkg-color); 
+  transition: 0.8s;
+}
+
+.dark-mode {
+  left: 30px !important;
+}
+
+.library {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.album-card {
+  width: 250px;
+  height: 300px;
+  background-color: #10EFC1;
+  margin: 20px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 5%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.album-card div {
+  padding-left: 5px;
+  padding-right: 5px
+}
+
+.name {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.artist {
+  margin-bottom: 20px;
+}
+
+.edit-btn,.delete-btn {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+form {
+  display:none;
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  top: 12%;
+  left: 50%;
+  margin-left: -250px;
+  background-color: #F90637; 
+  color: white;
+  border-radius: 1%;
+  transition: display 2s;
+}
+
+.form-title {
+  display: flex;
+  font-size: 1.2rem;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.exit {
+  font-size: 1.2rem;
+  border-radius: 5%;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap:wrap;
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+.form-group label, .form-group input, .form-group p, .form-group select {
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+form h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.form-group input, .form-group select {
+  background-color: #ffffff;
+  border: none;
+  padding: 5px;
+}
+
+
+form button {
+  background-color: var(--btn-alt-color);
+  color: #000000;
+}
+
+#type {
+  width: 10%;
+}
