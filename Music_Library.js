@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 let myLibrary = [{name: "OK Computer", artist: "Radiohead", year: 1997, genre: "Rock", type: "LP", rating: 9}];
-=======
-let myLibrary = [{name: "OK Computer", artist: "Radiohead"}];
->>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
 
 //DOM
 
@@ -55,22 +51,22 @@ if(typeof(Storage) !== "undefined" && Storage !== null ) {
     setStyles();
     fetchLibrary();
 } else {
-    populateStorage();  
+    populateStorage();
     updateLocLibrary();
 }
 
 function populateStorage() {
-    localStorage.setItem('darkMode', toggleBtn.classList.contains("dark-mode"));  
+    localStorage.setItem('darkMode', toggleBtn.classList.contains("dark-mode"));
 }
 
 
 function setStyles() {
     let isDarkMode = localStorage.getItem("darkMode");
-    if (isDarkMode == "true"){    
+    if (isDarkMode == "true"){
         toggleBtn.classList.add("dark-mode");
         rootColor.style.setProperty('--main-bg-color', "black");
         rootColor.style.setProperty('--main-text-color', "white");
-    } 
+    }
 }
 
 function updateLocLibrary() {
@@ -97,14 +93,14 @@ function Album(name, artist, year, genre, type, rating) {
     this.name = name;
     this.artist = artist;
     this.year = year;
-    this.genre = genre; // make it an array so it accepts multiple values // 
+    this.genre = genre; // make it an array so it accepts multiple values //
     this.type = type;
     this.rating = rating;
     // add mood
 }
 
 function addAlbumToLibrary() {
-    
+
     event.preventDefault();
     const radioTypes = document.querySelectorAll('input[name="type"]');
     let typeValue;
@@ -114,8 +110,8 @@ function addAlbumToLibrary() {
             break;
         }
     }
-    var newAlbum = new Album(document.getElementById("name").value, document.getElementById("artist").value, 
-    document.getElementById("year").value, document.getElementById("genre").value, 
+    var newAlbum = new Album(document.getElementById("name").value, document.getElementById("artist").value,
+    document.getElementById("year").value, document.getElementById("genre").value,
     typeValue, document.getElementById("rating").value);
     // Improvement --- prevent creation if name and artist are the same
     myLibrary.push(newAlbum);
@@ -128,7 +124,7 @@ function addAlbumToLibrary() {
 function createCard(album) {
     const albumCard = document.createElement("div");
     albumCard.setAttribute('class', 'album-card');
-    
+
     const name = document.createElement("div");
     const artist = document.createElement("div");
     const year = document.createElement("div");
@@ -136,14 +132,14 @@ function createCard(album) {
     const type = document.createElement("div");
     const rating = document.createElement("div");
     const deleteBtn = document.createElement("button");
-    
+
     name.setAttribute('class', 'name');
     artist.setAttribute('class', 'artist');
     year.setAttribute('class', 'year');
     genre.setAttribute('class', 'genre');
     type.setAttribute('class', 'type');
     rating.setAttribute('class', 'rating');
-    
+
     deleteBtn.setAttribute ('class', 'delete-btn');
     deleteBtn.addEventListener('click', deleteCard);
     /*
@@ -162,7 +158,7 @@ function createCard(album) {
     genre.textContent = "Genre: " + album.genre;
     type.textContent = "Type: " + album.type;
     rating.textContent = "Rating: " + album.rating;
-    
+
     deleteBtn.textContent = "Delete";
 
 
@@ -173,11 +169,11 @@ function createCard(album) {
     albumCard.appendChild(type)
     albumCard.appendChild(rating)
     albumCard.appendChild(deleteBtn)
-    
+
 
     container.appendChild(albumCard);
 
-    popUp.style.display = "none";  
+    popUp.style.display = "none";
 }
 
 // GENERATE FORM
@@ -238,11 +234,11 @@ function changeColor() {
         rootColor.style.setProperty('--main-bg-color', "white");
         rootColor.style.setProperty('--main-text-color', "black")
     }
-    else {     
+    else {
         rootColor.style.setProperty('--main-bg-color', "black");
         rootColor.style.setProperty('--main-text-color', "white");
-    } 
-    toggleBtn.classList.toggle("dark-mode"); 
+    }
+    toggleBtn.classList.toggle("dark-mode");
     populateStorage();
 }
 
