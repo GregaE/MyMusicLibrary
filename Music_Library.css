@@ -22,6 +22,7 @@ button {
   border-radius: 15px;
   cursor: pointer;
   padding: 3px 12px;
+<<<<<<< HEAD
   -webkit-appearance: none;
   -moz-appearance: none;
   text-decoration: none;
@@ -35,6 +36,10 @@ button:hover {
 }
 
 
+=======
+}
+
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
 header {
   text-align: center;
   font-size: 2.5rem;
@@ -49,6 +54,7 @@ section {
 }
 
 .create-container {
+<<<<<<< HEAD
   height: 50px;
   font-size: 20px;
   text-align: center;
@@ -57,6 +63,15 @@ section {
 
 #btn-create {
    height: 50px;
+=======
+  height: 50px; 
+  font-size: 20px;
+  text-align: center;
+}
+
+#btn-create {
+   height: 50px; 
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
    font-size: 1.2rem;
 }
 
@@ -66,22 +81,37 @@ section {
   border-radius: 10px;
   background-color: var(--main-text-color);
   cursor: pointer;
+<<<<<<< HEAD
   margin-top: 5px;
+=======
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
 }
 
 #toggle-btn {
   position: relative;
+<<<<<<< HEAD
   left: 4px;
   top: 2px;
   width: 16px;
   height: 16px;
   border-radius: 10px;
   background-color:  var(--btn-bkg-color);
+=======
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color:  var(--btn-bkg-color); 
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
   transition: 0.8s;
 }
 
 .dark-mode {
+<<<<<<< HEAD
   margin-left: 25px;
+=======
+  left: 30px !important;
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
 }
 
 .library {
@@ -128,7 +158,11 @@ form {
   top: 12%;
   left: 50%;
   margin-left: -250px;
+<<<<<<< HEAD
   background-color: #F90637;
+=======
+  background-color: #F90637; 
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
   color: white;
   border-radius: 1%;
   transition: display 2s;
@@ -176,6 +210,7 @@ form button {
   color: #000000;
 }
 
+<<<<<<< HEAD
 form button:hover {
   background: #51fbd9;
 }
@@ -185,3 +220,8 @@ form button:hover {
   width: 10%;
 }
 
+=======
+#type {
+  width: 10%;
+}
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d

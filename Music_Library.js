@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 let myLibrary = [{name: "OK Computer", artist: "Radiohead", year: 1997, genre: "Rock", type: "LP", rating: 9}];
+=======
+let myLibrary = [{name: "OK Computer", artist: "Radiohead"}];
+>>>>>>> c06c7f9d360a1257e9e3f675f040da26f1e4304d
 
 //DOM
 
