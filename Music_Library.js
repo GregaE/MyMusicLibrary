@@ -89,14 +89,16 @@ if (myLibrary !== null) {
     }
 }
 
-function Album(name, artist, year, genre, type, rating) {
-    this.name = name;
-    this.artist = artist;
-    this.year = year;
-    this.genre = genre; // make it an array so it accepts multiple values //
-    this.type = type;
-    this.rating = rating;
-    // add mood
+class Album {
+    constructor (name, artist, year, genre, type, rating) {
+        this.name = name;
+        this.artist = artist;
+        this.year = year;
+        this.genre = genre; // make it an array so it accepts multiple values //
+        this.type = type;
+        this.rating = rating;
+        // add mood
+    }
 }
 
 function addAlbumToLibrary() {
