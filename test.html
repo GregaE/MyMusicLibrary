@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Little Test</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+</head>
+
+<body>
+
+<div id="appear"></div>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDJ9uAIoiD9hEWLU9B7Yt1BqmNyugYGI6E",
+    authDomain: "mymusiclibrary-64d9d.firebaseapp.com",
+    projectId: "mymusiclibrary-64d9d",
+    storageBucket: "mymusiclibrary-64d9d.appspot.com",
+    messagingSenderId: "259731000214",
+    appId: "1:259731000214:web:08153242fe0355a74cebb7",
+    measurementId: "G-53RFX1VDBV"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+// Actual code
+
+const appear = document.getElementById("appear");
+
+// Create References
+
+const dbRefObject = firebase.database().ref().child("appear");
+
+// Sync object changes
+
+dbRefObject.on("value", snap => console.log(snap.val()));
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
